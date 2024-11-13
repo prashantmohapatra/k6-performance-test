@@ -1,0 +1,10 @@
+{
+    "scenarios": {
+            "postcodeScenario": {
+                "executor": "constant-vus",
+                "exec": "postcodeScenario",
+                "vus": 1,
+                "duration": "30s"
+            }
+        }
+    }

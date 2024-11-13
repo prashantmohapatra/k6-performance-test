@@ -1,0 +1,13 @@
+{
+    "type": "loadtest",
+    "actionWeighting": [
+        {
+            "apiName": "getRandomPostcode",
+            "apiDistribution": 55
+        },
+        {
+            "apiName": "getPostcode",
+            "apiDistribution": 45
+        }
+    ]
+}
