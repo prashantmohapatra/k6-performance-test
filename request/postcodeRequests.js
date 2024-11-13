@@ -11,7 +11,9 @@ const headers = { 'Content-Type': 'application/json' };
 // Function to retrieve a random postcode
 export function getRandomPostcode() {
   const url = `${host}/random/postcodes`;
-  const response = http.get(url, { headers: headers });
+  const response = http.get(url, { headers: headers }, 
+    { tags: { name: 'GET_Random_Postcode' } }
+  );
 
   check(response, {
     'GET random postcode successful': (r) => r.status === 200,
@@ -21,7 +23,9 @@ export function getRandomPostcode() {
 // Function to retrieve a specific postcode
 export function getPostcode(postcode) {
   const url = `${host}/postcodes/${postcode}`;
-  const response = http.get(url, { headers: headers });
+  const response = http.get(url, { headers: headers }, 
+    { tags: { name: 'GET_Postcode' } }
+  );
 
   check(response, {
     'GET specific postcode successful': (r) => r.status === 200,
